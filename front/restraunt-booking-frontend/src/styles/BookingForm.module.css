@@ -1,0 +1,107 @@
+/* BookingForm.module.css */
+
+/* Основной стиль для формы */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-image: url('path_to_your_pattern.png'); /* Добавьте сюда путь к изображению фона */
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+/* Стиль для заголовка формы */
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* Стиль для полей ввода */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+input[type="date"] {
+    width: 100%;
+    background-color: #fff;
+}
+
+input[type="number"] {
+    width: 48%;
+    display: inline-block;
+}
+
+input[type="number"]:nth-child(odd) {
+    margin-right: 4%;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* Стиль для кнопки */
+button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Ошибка */
+.error {
+    color: red;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+/* Стиль для поля выбора стола */
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 15px;
+    }
+
+    input[type="number"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    input[type="number"]:nth-child(odd) {
+        margin-right: 0;
+    }
+}
