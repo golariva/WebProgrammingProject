@@ -1,0 +1,60 @@
+/* RegisterForm.module.css */
+
+/* Основной фон с узорами */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("https://www.transparenttextures.com/patterns/bedge-grunge.png");
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.8); /* Прозрачный фон для формы */
+    padding: 30px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px -30px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+h1{
+    text-align: center;
+    color: #c7c7c7;
+}
+h2{
+    text-align: center;
+    color: #c7c7c7;
+}
+p {
+    color: red;
+    font-size: 14px;
+}
