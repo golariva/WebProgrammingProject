@@ -11,8 +11,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout code (with submodules)
         uses: actions/checkout@v4
+        with:
+          submodules: true  # 👈 Важно: рекурсивно инициализирует сабмодули
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
