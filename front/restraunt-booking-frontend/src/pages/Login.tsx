@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getUserProfile } from "../api";
-import LoginForm from "../components/LoginForm.tsx";
+import LoginForm from "../components/LoginForm";
 import {Button, Flex, Typography} from "antd";
 
 

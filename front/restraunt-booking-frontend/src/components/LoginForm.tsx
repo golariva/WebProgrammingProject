@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import API from "../api.ts";
+import API from "../api";
 import {Button, Flex} from "antd";
 import { Typography } from 'antd';
 
