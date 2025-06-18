@@ -6,7 +6,7 @@ WORKDIR /app
 
 COPY package.json yarn.lock .yarnrc.yml ./
 
-RUN yarn install
+RUN yarn install --immutable
 
 COPY . .
 
