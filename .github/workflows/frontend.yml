@@ -23,7 +23,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: front/restraunt-booking-frontend
-        run: npm install
+        run: npm ci
 
 #      - name: Run tests
 #        run: |
