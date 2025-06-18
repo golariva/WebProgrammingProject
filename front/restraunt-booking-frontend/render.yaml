@@ -1,7 +1,6 @@
 services:
   - type: web
-    name: restaurant-booking-frontend
-    env: static
-    buildCommand: cd front/restraunt-booking-frontend && npm install --include=optional && npm run build
-    staticPath: front/restraunt-booking-frontend/dist
-    nodeVersion: 18
+    name: restraunt-booking-frontend
+    rootDirectory: .
+    publishPath: front/restraunt-booking-frontend/dist
+    branch: main
