@@ -35,3 +35,17 @@ jobs:
         run: |
           cd front/restraunt-booking-frontend
           npm test -- --watchAll=false --coverage
+          
+      - name: Install dependencies and build
+        working-directory: front/restraunt-booking-frontend
+        run: |
+          npm install
+          npm run build
+
+      - name: Deploy to Render
+        run: |
+          curl -X POST \
+            -H "Authorization: Bearer rnd_D7L80nAJmAOBqrnyksf53psGso7N" \
+            -H "Content-Type: application/json" \
+            -d '{"revision":"main"}' \
+            "https://api.render.com/v1/services/srv-d19cf6vdiees73aq6mng/deploys"
