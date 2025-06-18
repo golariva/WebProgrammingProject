@@ -21,32 +21,18 @@ jobs:
         with:
           node-version: 20
 
-      - name: Clean node modules and lock file
-        run: |
-          cd front/restraunt-booking-frontend
-          rm -rf node_modules
-          rm -f package-lock.json
-
       - name: Install dependencies
-        run: |
-          cd front/restraunt-booking-frontend
-          npm ci
-
-      - name: Build project
-        run: |
-          cd front/restraunt-booking-frontend
-          npm run build
+        working-directory: front/restraunt-booking-frontend
+        run: npm install
 
       - name: Run tests
         run: |
           cd front/restraunt-booking-frontend
           npm test -- --watchAll=false --coverage
           
-      - name: Install dependencies and build
+      - name: Build project
         working-directory: front/restraunt-booking-frontend
-        run: |
-          npm install
-          npm run build
+        run: npm run build
 
       - name: Deploy to Render
         run: |
