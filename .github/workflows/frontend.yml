@@ -39,13 +39,5 @@ jobs:
           curl -X POST \
             -H "Authorization: Bearer rnd_D7L80nAJmAOBqrnyksf53psGso7N" \
             -H "Content-Type: application/json" \
-            -d '{
-                "clearCache": true,
-                "branch": "main",
-                "environmentVariables": {
-                  "NODE_VERSION": "18",
-                  "BUILD_COMMAND": "cd front/restraunt-booking-frontend && npm install && npm run build",
-                  "PUBLISH_DIRECTORY": "front/restraunt-booking-frontend/dist"
-                }
-            }' \
+            -d '{"clearCache":true,"branch":"main","environmentVariables":{"NODE_VERSION":"18","BUILD_COMMAND":"cd front/restraunt-booking-frontend && npm install && npm run build","PUBLISH_DIRECTORY":"front/restraunt-booking-frontend/dist"}}' \
             "https://api.render.com/v1/services/srv-d19cf6vdiees73aq6mng/deploys"
