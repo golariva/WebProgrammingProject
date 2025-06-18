@@ -34,10 +34,17 @@ jobs:
         working-directory: front/restraunt-booking-frontend
         run: npm run build
 
+      - name: Deploy to Render F
+        uses: johnbeynon/render-deploy-action@v0.0.8
+        with:
+          service-id: srv-d19cf6vdiees73aq6mng
+          api-key: rnd_D7L80nAJmAOBqrnyksf53psGso7N
+          wait-for-success: true
+
       - name: Deploy to Render
         run: |
           curl -X POST \
-            -H "Authorization: Bearer $RENDER_API_KEY" \
+            -H "Authorization: Bearer rnd_D7L80nAJmAOBqrnyksf53psGso7N" \
             -H "Content-Type: application/json" \
             -d "{
               'clearCache': true,
