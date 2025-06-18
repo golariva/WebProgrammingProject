@@ -30,3 +30,8 @@ jobs:
         run: |
           cd front/restraunt-booking-frontend
           npm run build
+
+      - name: Run tests
+        run: |
+          cd front/restraunt-booking-frontend
+          npm test
