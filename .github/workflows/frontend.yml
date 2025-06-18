@@ -21,6 +21,12 @@ jobs:
         with:
           node-version: 20
 
+      - name: Clean node modules and lock file
+        run: |
+          cd front/restraunt-booking-frontend
+          rm -rf node_modules
+          rm -f package-lock.json
+
       - name: Install dependencies
         run: |
           cd front/restraunt-booking-frontend
