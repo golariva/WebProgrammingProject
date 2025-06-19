@@ -29,6 +29,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:8018",
+        "http://localhost:8000",
         "http://devops-03.hse.perm.ru:8018"
     ],
     allow_credentials=True,

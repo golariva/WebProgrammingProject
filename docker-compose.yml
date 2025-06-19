@@ -8,8 +8,8 @@ services:
       POSTGRES_DB: restraunts_booking
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-#    ports:
-#      - "8019:5432"
+    ports:
+      - "8019:5432"
     volumes:
       - db-data:/var/lib/postgresql/data
 
@@ -22,18 +22,18 @@ services:
       DATABASE_URL: postgresql+asyncpg://postgres:postgres@db:5432/restraunts_booking
     depends_on:
       - db
-#    volumes:
-#      - ./back/restaurants_booking_app:/app
+    volumes:
+      - ./back/restaurants_booking_app:/app
 
   frontend:
     build: ./front/restraunt-booking-frontend
     container_name: frontend
-#    ports:
-#      - "8018:3000"
+    ports:
+      - "8018:5173"
     depends_on:
       - backend
     environment:
-      VITE_API_URL: http://localhost:8000
+      VITE_API_URL: http://backend:8000
 
 volumes:
   db-data:

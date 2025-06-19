@@ -14,6 +14,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Set up Docker
+        run: |
+          docker compose -f docker-compose.yml build
+          docker compose -f docker-compose.yml up -d
+          docker ps  # Проверить, что контейнеры запустились
+          curl http://localhost:8000  # Проверить доступность API (если порт проброшен)
+
       - name: Set up SSH for server access
         uses: webfactory/ssh-agent@v0.5.4
         with:

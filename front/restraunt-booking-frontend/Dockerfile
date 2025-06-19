@@ -10,4 +10,6 @@ RUN yarn install --immutable
 
 COPY . .
 
+EXPOSE 5173
+
 CMD ["yarn", "dev"]
