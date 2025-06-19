@@ -5,7 +5,7 @@ from sqlalchemy import Boolean, Column, Integer, String
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
 from sqlalchemy.orm import DeclarativeBase, sessionmaker
 
-database_url = "postgresql+asyncpg://postgres:postgres@db:5432/restraunts_booking"
+database_url = os.getenv("DATABASE_URL")
 
 engine = create_async_engine(database_url)
 
