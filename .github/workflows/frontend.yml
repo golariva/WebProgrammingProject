@@ -14,7 +14,7 @@ jobs:
       - name: Checkout code (with submodules)
         uses: actions/checkout@v4
         with:
-          submodules: true  # 👈 Важно: рекурсивно инициализирует сабмодули
+          submodules: true
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
