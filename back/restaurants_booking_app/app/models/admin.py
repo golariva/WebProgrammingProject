@@ -1,8 +1,8 @@
 from sqlalchemy import Column, Integer, ForeignKey, Date
 from sqlalchemy.orm import relationship
-from restaurants_booking_app.app.database import Base
-from restaurants_booking_app.app.models.user import User
-from restaurants_booking_app.app.models.restraunt import Restaurant
+from app.database import Base
+from app.models.user import User
+from app.models.restraunt import Restaurant
 
 
 class Admin(Base):

@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, ForeignKey, Date
 from sqlalchemy.orm import relationship
-from restaurants_booking_app.app.database import Base
-from restaurants_booking_app.app.models.floor import Floor
+from app.database import Base
+from app.models.floor import Floor
 
 class Table(Base):
     __tablename__ = "Table"

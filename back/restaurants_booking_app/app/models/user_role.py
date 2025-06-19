@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, ForeignKey, Date
 from sqlalchemy.orm import relationship
-from restaurants_booking_app.app.database import Base
+from app.database import Base
 
 
 class User_Role(Base):

@@ -3,16 +3,16 @@ from sqlalchemy.orm import Session, selectinload, joinedload
 from sqlalchemy import select, insert
 from passlib.context import CryptContext
 from sqlalchemy.ext.asyncio import AsyncSession
-from restaurants_booking_app.app.database import get_async_session as get_db
-from restaurants_booking_app.app.models.user import User
-from restaurants_booking_app.app.schemas.user import UserCreate, UserResponse, UserUpdate
-from restaurants_booking_app.app.routes.auth import get_current_user
-from restaurants_booking_app.app.models.booking import Booking
-from restaurants_booking_app.app.models.table import Table
-from restaurants_booking_app.app.schemas.booking import BookingResponse
+from app.database import get_async_session as get_db
+from app.models.user import User
+from app.schemas.user import UserCreate, UserResponse, UserUpdate
+from app.routes.auth import get_current_user
+from app.models.booking import Booking
+from app.models.table import Table
+from app.schemas.booking import BookingResponse
 from typing import List
 
-from restaurants_booking_app.app.models.floor import Floor
+from app.models.floor import Floor
 
 
 router = APIRouter(

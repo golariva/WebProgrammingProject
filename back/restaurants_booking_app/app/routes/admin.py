@@ -2,9 +2,9 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from sqlalchemy import select, insert
 from sqlalchemy.ext.asyncio import AsyncSession
-from restaurants_booking_app.app.database import get_async_session as get_db
-from restaurants_booking_app.app.models.admin import Admin
-from restaurants_booking_app.app.schemas.admin import AdminCreate, AdminResponse
+from app.database import get_async_session as get_db
+from app.models.admin import Admin
+from app.schemas.admin import AdminCreate, AdminResponse
 
 router = APIRouter(
     prefix="/admin",

@@ -3,9 +3,9 @@ from sqlalchemy.orm import Session
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, insert
 from geopy.geocoders import Nominatim
-from restaurants_booking_app.app.database import get_async_session as get_db
-from restaurants_booking_app.app.models.restraunt import Restaurant
-from restaurants_booking_app.app.schemas.restraunt import RestaurantCreate, RestaurantResponse
+from app.database import get_async_session as get_db
+from app.models.restraunt import Restaurant
+from app.schemas.restraunt import RestaurantCreate, RestaurantResponse
 from typing import List
 
 router = APIRouter(

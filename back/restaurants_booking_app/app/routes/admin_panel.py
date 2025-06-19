@@ -2,16 +2,16 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 from sqlalchemy.orm import joinedload
-from restaurants_booking_app.app.database import get_async_session as get_db
-from restaurants_booking_app.app.models.booking import Booking
-from restaurants_booking_app.app.models.table import Table
-from restaurants_booking_app.app.models.floor import Floor
-from restaurants_booking_app.app.models.restraunt import Restaurant
-from restaurants_booking_app.app.models.user import User
-from restaurants_booking_app.app.schemas.booking import BookingResponse
-from restaurants_booking_app.app.routes.auth import get_current_user
+from app.database import get_async_session as get_db
+from app.models.booking import Booking
+from app.models.table import Table
+from app.models.floor import Floor
+from app.models.restraunt import Restaurant
+from app.models.user import User
+from app.schemas.booking import BookingResponse
+from app.routes.auth import get_current_user
 from typing import List
-from restaurants_booking_app.app.schemas.booking import BookingStatusUpdate
+from app.schemas.booking import BookingStatusUpdate
 
 router = APIRouter(
     prefix="/admin/booking",
