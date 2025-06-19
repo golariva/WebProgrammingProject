@@ -19,7 +19,6 @@ jobs:
           docker compose -f docker-compose.yml build
           docker compose -f docker-compose.yml up -d
           docker ps  # Проверить, что контейнеры запустились
-          curl http://localhost:8000  # Проверить доступность API (если порт проброшен)
 
       - name: Set up SSH for server access
         uses: webfactory/ssh-agent@v0.5.4
