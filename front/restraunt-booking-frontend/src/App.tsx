@@ -9,6 +9,8 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import AdminPanel from "./pages/AdminPanel.tsx";
 import UserBookings from "./pages/UserBookings";
+import AddRestaurant from "./pages/AddRestaurant";
+
 
 function App() {
     return (
@@ -24,7 +26,7 @@ function App() {
                 <Route path="/about" element={<About />} />
                 <Route path="/adminpanel" element={<AdminPanel />} />
                 <Route path="/user_bookings" element={<UserBookings />} />
-
+                <Route path="/add-restaurant" element={<AddRestaurant />} />
             </Routes>
         </Router>
     );

@@ -67,13 +67,14 @@ export default function Home() {
                     </>
                 )}
                 {user?.user_role_id === 2 && (
-                    <Button
-                        onClick={() => navigate("/adminpanel")}
-                        type={"primary"}
-                        size={"large"}
-                    >
-                        Панель администратора
-                    </Button>
+                    <>
+                        <Button onClick={() => navigate("/adminpanel")} type="primary" size="large">
+                            Панель администратора
+                        </Button>
+                        <Button onClick={() => navigate("/add-restaurant")} type="primary" size="large">
+                            Добавить ресторан
+                        </Button>
+                    </>
                 )}
             </Flex>
         </Flex>

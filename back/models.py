@@ -19,7 +19,7 @@ class User(Base):
     user_name = Column(String(100), nullable=False)
     user_email = Column(String(100), unique=True, nullable=False)
     user_phone = Column(String(12), unique=True)
-    user_hash_password = Column(String(255), nullable=False)  # Здесь храним хэшированный пароль
+    user_hash_password = Column(String(255), nullable=False) 
     user_role_id = Column(Integer, ForeignKey("user_role.user_role_id"))
     user_created_date = Column(Date)
 

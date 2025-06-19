@@ -7,7 +7,7 @@ from sqlalchemy.orm import DeclarativeBase, sessionmaker
 db_host = "localhost"
 db_port = 5432
 db_user = "postgres"
-db_pass = "postgres"
+db_pass = "123"
 db_name = "restraunts_booking"
 
 database_url = f"postgresql+asyncpg://{db_user}:{db_pass}@{db_host}:{db_port}/{db_name}"
