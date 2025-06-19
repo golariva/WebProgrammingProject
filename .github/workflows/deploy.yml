@@ -1,4 +1,4 @@
-name: deploy.yml
+name: Docker Compose
 on:
   push:
     branches: [ develop, main, chore/deploy ]
