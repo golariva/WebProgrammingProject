@@ -5,7 +5,7 @@ from sqlalchemy import Boolean, Column, Integer, String
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
 from sqlalchemy.orm import DeclarativeBase, sessionmaker
 
-db_host = "localhost"Add commentMore actions
+db_host = "localhost"
 db_port = 5432
 db_user = "postgres"
 db_pass = "postgres"
