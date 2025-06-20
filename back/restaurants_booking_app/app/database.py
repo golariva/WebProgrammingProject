@@ -13,8 +13,6 @@ db_name = "restraunts_booking"
 
 database_url = f"postgresql+asyncpg://{db_user}:{db_pass}@{db_host}:{db_port}/{db_name}"
 
-database_url = os.getenv("DATABASE_URL")
-
 engine = create_async_engine(database_url)
 
 async_session_maker = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)
