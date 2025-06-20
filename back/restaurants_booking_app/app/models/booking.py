@@ -1,10 +1,10 @@
 from sqlalchemy import Column, Integer, String, ForeignKey, Date, DATETIME, TIMESTAMP, Boolean
 from datetime import datetime, timezone
 from sqlalchemy.orm import relationship
-from restaurants_booking_app.app.database import Base
-from restaurants_booking_app.app.models.table import Table
-from restaurants_booking_app.app.models.user import User
-from restaurants_booking_app.app.models.booking_status import Booking_Status
+from app.database import Base
+from app.models.table import Table
+from app.models.user import User
+from app.models.booking_status import Booking_Status
 
 
 class Booking(Base):

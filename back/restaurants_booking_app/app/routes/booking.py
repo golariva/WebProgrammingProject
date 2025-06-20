@@ -2,12 +2,12 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from sqlalchemy import select, insert, and_, or_
 from sqlalchemy.ext.asyncio import AsyncSession
-from restaurants_booking_app.app.database import get_async_session as get_db
-from restaurants_booking_app.app.models.booking import Booking
-from restaurants_booking_app.app.schemas.booking import BookingCreate, BookingResponse
-from restaurants_booking_app.app.models.table import Table
-from restaurants_booking_app.app.models.floor import Floor
-from restaurants_booking_app.app.models.restraunt import Restaurant
+from app.database import get_async_session as get_db
+from app.models.booking import Booking
+from app.schemas.booking import BookingCreate, BookingResponse
+from app.models.table import Table
+from app.models.floor import Floor
+from app.models.restraunt import Restaurant
 from datetime import time
 from typing import List
 

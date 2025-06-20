@@ -31,7 +31,7 @@ async def get_restaurant_location(restaurant_id: int, db: AsyncSession = Depends
         location = geolocator.geocode(restaurant.restaurant_address)
         if location:
             return {"latitude": location.latitude, "longitude": location.longitude}
-    
+
     raise HTTPException(status_code=400, detail="Не удалось определить координаты")
 
 
@@ -39,7 +39,7 @@ async def get_restaurant_location(restaurant_id: int, db: AsyncSession = Depends
 async def add_specific_restaurant(new_restaurant: RestaurantCreate, session: AsyncSession = Depends(get_db)):
     stmt = insert(Restaurant).values(
         **new_restaurant.model_dump(),
-        restaurant_created_date=datetime.utcnow().date() 
+        restaurant_created_date=datetime.utcnow().date()
     )
     await session.execute(stmt)
     await session.commit()

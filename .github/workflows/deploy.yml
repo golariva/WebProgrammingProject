@@ -1,0 +1,21 @@
+name: Docker Compose
+on:
+  push:
+    branches: [ develop, main, chore/deploy ]
+  pull_request:
+    branches: [ develop, main ]
+
+jobs:
+  deploy:
+    name: Build & Deploy via SSH
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Docker
+        run: |
+          docker compose -f docker-compose.yml build
+          docker compose -f docker-compose.yml up -d
+          docker ps

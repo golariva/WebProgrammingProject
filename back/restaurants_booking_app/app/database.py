@@ -1,3 +1,4 @@
+import os
 from typing import AsyncGenerator
 from fastapi import Depends
 from sqlalchemy import Boolean, Column, Integer, String

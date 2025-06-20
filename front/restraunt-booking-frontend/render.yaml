@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: restraunt-booking-frontend
+    rootDirectory: .
+    publishPath: front/restraunt-booking-frontend/dist
+    branch: main

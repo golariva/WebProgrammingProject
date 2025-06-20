@@ -1,8 +1,8 @@
 from passlib.context import CryptContext
 from sqlalchemy import Column, Integer, String, ForeignKey, Date
 from sqlalchemy.orm import relationship
-from restaurants_booking_app.app.database import Base
-from restaurants_booking_app.app.models.user_role import User_Role
+from app.database import Base
+from app.models.user_role import User_Role
 from datetime import date
 from sqlalchemy.sql import func
 

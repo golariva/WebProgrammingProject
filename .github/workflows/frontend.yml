@@ -22,14 +22,12 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: |
-          cd front/restraunt-booking-frontend
-          npm ci
+        working-directory: front/restraunt-booking-frontend
+        run: npm install --include=optional
 
       - name: Build project
-        run: |
-          cd front/restraunt-booking-frontend
-          npm run build
+        working-directory: front/restraunt-booking-frontend
+        run: npm run build
 
       - name: Run tests
         run: |

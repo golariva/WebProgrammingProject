@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import select, insert
 from sqlalchemy.ext.asyncio import AsyncSession
-from restaurants_booking_app.app.database import get_async_session as get_db
-from restaurants_booking_app.app.models.booking_status import Booking_Status
-from restaurants_booking_app.app.schemas.bookin_status import BookingStatusCreate, BookingStatusResponse
+from app.database import get_async_session as get_db
+from app.models.booking_status import Booking_Status
+from app.schemas.bookin_status import BookingStatusCreate, BookingStatusResponse
 
 router = APIRouter(
     prefix="/booking_status",

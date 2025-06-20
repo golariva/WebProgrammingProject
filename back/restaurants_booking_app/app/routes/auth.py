@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends, HTTPException, status, Response
 from sqlalchemy.ext.asyncio import AsyncSession
 from passlib.context import CryptContext
-from restaurants_booking_app.app.database import get_async_session as get_db
-from restaurants_booking_app.app.models.user import User
-from restaurants_booking_app.app.schemas.user import UserCreate
+from app.database import get_async_session as get_db
+from app.models.user import User
+from app.schemas.user import UserCreate
 from sqlalchemy.future import select
 from sqlalchemy import insert
 from datetime import datetime, timedelta

@@ -2,9 +2,9 @@ from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 from sqlalchemy import select, insert
 from sqlalchemy.ext.asyncio import AsyncSession
-from restaurants_booking_app.app.database import get_async_session as get_db
-from restaurants_booking_app.app.models.floor import Floor
-from restaurants_booking_app.app.schemas.floor import FloorCreate, FloorResponse
+from app.database import get_async_session as get_db
+from app.models.floor import Floor
+from app.schemas.floor import FloorCreate, FloorResponse
 
 router = APIRouter(
     prefix="/floor",
